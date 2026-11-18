@@ -1,5 +1,5 @@
 
-import { Link, Route, Routes, BrowserRouter } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { btn } from './components/ui'
 import CatalogPage from './pages/CatalogPage'
@@ -21,20 +21,13 @@ function NotFound() {
 
 export default function App() {
   return (
-    <BrowserRouter
-      future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      }}
-    >
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<CatalogPage />} />
-          <Route path="conteudos/:id" element={<DetailPage />} />
-          <Route path="favoritos" element={<FavoritesPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<CatalogPage />} />
+        <Route path="conteudos/:id" element={<DetailPage />} />
+        <Route path="favoritos" element={<FavoritesPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   )
 }
