@@ -64,6 +64,13 @@ Este projeto possui duas aplicações: **Web (React + TypeScript)** e **Mobile (
 O aplicativo será compilado e instalado no emulador Android.
 
 ###  Gerando e instalando o APK
+-> Eu gerei uma build independente, caso queira utilizar:
+
+BUILD SUCCESSFUL in 1m 10s
+93 actionable tasks: 19 executed, 74 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.4.1/userguide/configuration_cache_enabling.html
+
+Se ela estiver vencido, siga os passos para criar uma nova
 
 Para gerar um APK de desenvolvimento, execute na pasta da aplicação Mobile:
 
