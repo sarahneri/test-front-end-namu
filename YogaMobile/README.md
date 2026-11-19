@@ -1,97 +1,90 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+O repositório contém duas implementações Mobile, organizadas em diretórios distintos.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Estrutura do projeto
 
-## Step 1: Start Metro
+YogaMobile/
+├── android/
+├── App.tsx
+├── index.js
+└── mobile-app/
+    └── mobile/
+        ├── package.json
+        └── ...
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Versões disponíveis
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Diretório
 
-```sh
-# Using npm
-npm start
+Descrição
 
-# OR using Yarn
-yarn start
-```
+YogaMobile/
 
-## Step 2: Build and run your app
+Projeto React Native com configuração Android nativa e implementação da interface inicial de bem-estar.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+YogaMobile/mobile-app/mobile/
 
-### Android
+Implementação funcional em React Native com Expo, contendo integração com a API, navegação e testes.
 
-```sh
-# Using npm
+Implementação funcional: YogaMobile/mobile-app/mobile/
+
+A implementação funcional foi desenvolvida utilizando React Native, TypeScript e Expo SDK 52.
+
+ Executando a implementação funcional
+
+Pré-requisitos:
+
+Node.js e npm
+
+Android Studio e Android SDK configurados
+
+Emulador Android ou dispositivo compatível
+
+Na raiz do repositório:
+
+cd YogaMobile/mobile-app/mobile
+npm install
 npm run android
 
-# OR using Yarn
-yarn android
-```
+O comando npm run android inicia o ambiente Expo e tenta abrir a aplicação no Android.
 
-### iOS
+Para iniciar apenas o servidor de desenvolvimento:
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+npm start
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Executando os testes
 
-```sh
-bundle install
-```
+Dentro de YogaMobile/mobile-app/mobile/:
 
-Then, and every time you update your native dependencies, run:
+npm test
 
-```sh
-bundle exec pod install
-```
+Para verificar a tipagem TypeScript:
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+npm run typecheck
 
-```sh
-# Using npm
-npm run ios
+Para executar o ESLint:
 
-# OR using Yarn
-yarn ios
-```
+npm run lint
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+ APK Android
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+O APK de desenvolvimento foi gerado a partir do projeto Android localizado em YogaMobile/.
 
-## Step 3: Modify your app
+Caminho do artefato:
 
-Now that you have successfully run the app, let's make changes!
+YogaMobile/android/app/build/outputs/apk/debug/app-debug.apk
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Esse APK corresponde ao projeto React Native da raiz de YogaMobile/, que contém a interface inicial estática.
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+Importante: o APK mencionado não deve ser confundido com a implementação funcional em YogaMobile/mobile-app/mobile/. Não há um APK da implementação Expo validado nesta entrega.
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+Por ser um APK de debug, sua execução pode depender do Metro Bundler.
 
-## Congratulations! :tada:
+Observações sobre a organização
 
-You've successfully run and modified your React Native App. :partying_face:
+A separação entre as implementações foi esclarecida para facilitar a identificação do código e evitar ambiguidades durante a execução e avaliação.
 
-### Now what?
+A versão Expo é a referência para consultar a implementação com integração à API, navegação e testes. A versão da raiz contém a interface inicial e a configuração Android nativa.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+As duas implementações não devem ser consideradas equivalentes.
